@@ -115,13 +115,6 @@ return 0;
 //Q6
 
 
-  #include<iostream>
-  using namespace std;
   
-  #include<iostream>
-  using namespace std;
-  
-  int main(){
-  int
   return 0;
   }
