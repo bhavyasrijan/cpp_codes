@@ -1,1 +1,933 @@
+//Q1
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int m,n;
+    cout<<"of how many rows star pattern you want"<<endl;
+    cin>>m;
+    cout<<"of how many columns star pattern you want"<<endl;
+    cin>>n;
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            cout<<"*";
+           
+        }
+         cout<<endl;
+    }
+return 0;
+}
+
+
+//Q2
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+  int m,n;
+  cout<<"of how many rows star pattern you want"<<endl;
+  cin>>m;
+  cout<<"of how many columns star pattern you want"<<endl;
+  cin>>n;
+
+   for ( int i = 0; i < m; i++)
+   {
+       for (int j = 0; j < n; j++)
+       {
+           if(i==0||i==m-1 || j==0||j==n-1){
+           cout<<"*";
+           }
+           else{
+           cout<<" ";
+           }
+       }
+       cout<<endl;
+   }
+
+return 0;
+}*/
+
+
+
+//Q3
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+   int m,n;
+
+   cout<<"enter rows"<<endl;
+   cin>>m;
+   cout<<"enter colums"<<endl;
+   cin>>n;
+
+    for (int i = 1; i <= m; i++)
+    {
+        for (int j = 1; j <=i ; j++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+       
+
+
+
+
+
+
+return 0;
+}*/
+
+
+
+//Q4
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+    int m,n;
+
+   cout<<"enter rows"<<endl;
+   cin>>m;
+   
+
+   for (int i = m; i >0; i--)
+   {
+       for (int j = 0; j <i ; j++)
+       {
+          cout<<"*"; 
+       }
+       cout<<endl;
+   }
+   
+      
+
+
+return 0;
+}*/
+
+
+
+//Q5
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+   int m;
+cout<<"enter rows"<<endl;
+   cin>>m;
+   
+
+   for (int i = 1; i <=m; i++)
+   {
+       for (int j = 1; j <=m ; j++)
+       {  
+           if(j<=m-i)
+          cout<<" "; 
+
+          else
+          cout<<"*";
+       }
+       cout<<endl;
+   }
+
+return 0;
+}*/
+
+
+
+//Q6
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+
+cout<<"enter rows"<<endl;
+   cin>>n;
+   
+
+   for (int i = 1; i <=n; i++)
+   { 
+       for (int j = 1; j <=i; j++)
+       {
+           cout<<" "<< j ;
+       }
+       cout<<endl;
+   }
+return 0;
+}*/
+
+
+//Q7
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"enter rows"<<endl;
+cin>>n;
+
+for (int i = n; i >= 1; i--)
+{
+    for (int j= 1; j<=i; j++)
+    {
+        cout<<j<<" ";
+    }
+      cout<<"\n";
+}
+
+return 0;
+}*/
+
+
+
+//Q8
+
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+ int n;
+ cout<<"enter rows"<<endl;
+ cin>>n;
+
+for(int i=1;i<=n;i++){
+    for (int j = 1; j<=i; j++)
+    {
+       cout<<" "<<i;
+    }
+     cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+//Q9
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+
+int n;
+cout<<"enter rows"<<endl;
+cin>>n;
+
+for (int i = n; i >=1; i--)        //or (i=1;i<=n,i++) (j=1;j<=n-i+1;j++) cout<<" "<<i;
+{
+    for (int j = 1; j <=i; j++)
+    {
+        cout<<" "<<6-i;
+    }
+    cout<<"\n";
+}
+
+
+
+return 0;
+}*/
+
+
+
+//Q10
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"enter rows for flloyd's triangle"<<"\n";
+
+cin>>n;
+
+int num=1;
+
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        cout<<" "<<num;
+         num++;
+ }
+    cout<<"\n";
+}
+return 0;
+}*/
+
+
+
+//Q11
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+
+cout<<"enter rows for printing alternating 0-1 half pyramid pattern"<<endl;
+cin>>n;
+
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        if((i+j)%2==0)
+        cout<<" "<<"1";
+
+        else
+        cout<<" "<<"0";
+    }  
+       cout<<'\n';
+}
+return 0;
+}*/
+
+
+//Q12               *remember,its a hard one*
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+    int n,i,j,k;
+
+    cout<<"enter rows for palindromic pattern"<<endl;
+    cin>>n;
+
+for ( i = 1; i <=n; i++)
+{
+  k=i;
+
+  for( j=1;j<=n-i;j++)
+  {
+     cout<<"  ";
+
+  }
+
+   for(; j<=n;j++){
+
+       cout<<k<<" ";
+       k--;
+
+   }
+    k=1;
+
+   for(;j< n+i ;j++){
+       k++;
+       cout<<k<<" ";
+       
+   } 
+    for(;j<=2*n-1;j++){
+
+        cout<<" ";
+    }
+     
+     cout<<"\n";
+
+    
+}
+
+
+return 0;
+}*/
+
+
+
+//Q13                        advance pattern problem
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+
+int i,j,n;
+cout<<"enter n to print diamond with 2n rows"<<"\n";
+cin>>n;
+
+for ( i = 1; i <=n; i++)
+{
+    for(j=1;j<=n-i;j++){
+        cout<<" ";
+    }
+    
+    for(;j<n+i;j++){
+
+        cout<<"*";
+
+    }
+    
+    for(;j<=2*n-1;j++){
+        cout<<" ";
+    }
+
+    cout<<"\n";
+}
+
+ for ( i = n; i >=1; i--)
+{
+    for(j=1;j<=n-i;j++){
+        cout<<" ";
+    }
+    
+    for(;j<n+i;j++){
+
+        cout<<"*";
+
+    }
+    
+    for(;j<=2*n-1;j++){
+        cout<<" ";
+    }
+
+    cout<<"\n";
+     
+}
+
+return 0;
+}*/
+
+
+
+//Q14
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int i,j,n;
+
+cout<<"enter n to print hollow diamond of 2n rows"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+
+   for(j=1;j<=n-i;j++){
+       cout<<" ";
+   }
+   for(;j<=n-i+1;j++){
+       cout<<"*";
+   }
+   for(;j<n+i-1;j++){
+       cout<<" ";
+   }
+   for(;j<n+i;j++){
+       cout<<"*";
+   }
+   for(;j<=2*n-1;j++){
+       cout<<" ";
+   }
+   cout<<"\n";
+}
+
+for(i=n;i>=1;i--){
+
+   for(j=1;j<=n-i;j++){
+       cout<<" ";
+   }
+   for(;j<=n-i+1;j++){
+       cout<<"*";
+   }
+   for(;j<n+i-1;j++){
+       cout<<" ";
+   }
+   for(;j<n+i;j++){
+       cout<<"*";
+   }
+   
+   for(;j<=2*n-1;j++){
+       cout<<" ";
+   }
+   cout<<"\n";
+
+
+}
+
+
+return 0;
+}*/
+
+
+
+//Q15
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int i,j,n;
+cout<<"enter n rows to print hollow diamond inscribed in a rectangle"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+    for(j=1;j<=n-i+1;j++){
+        cout<<"*";
+    }
+    for(;j<n+i-1;j++){
+        cout<<" ";
+
+    }
+    for(;j<n+i;j++){
+        cout<<"*";
+
+    }
+    for(;j<=2*n-1;j++){
+        cout<<"*";
+    }
+    cout<<"\n";
+}
+
+for(i=n;i>=1;i--){
+    for(j=1;j<=n-i+1;j++){
+        cout<<"*";
+    }
+    for(;j<n+i-1;j++){
+        cout<<" ";
+
+    }
+    for(;j<n+i;j++){
+        cout<<"*";
+        
+    }
+    for(;j<=2*n-1;j++){
+        cout<<"*";
+    }
+    cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+
+//Q16
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int i,j,n;
+cout<<"enter n to print rhombus of n rows"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+
+   for(j=1;j<=n-i;j++){
+       cout<<" ";
+   }
+   for(j=1;j<=n;j++){
+       cout<<"*";
+   }
+
+   /*for(;j<n+i-1;j++){
+       cout<<" ";
+   }*/                        //star print krne ke baad hollow space ka tension ich nhi hai
+   /*for(;j<n+i;j++){
+       cout<<"*";
+   }
+   for(;j<=2*n-1;j++){
+       cout<<" ";
+   }
+
+   cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+
+//Q17
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+    int n,i,j;
+    cout<<"enter rows of hollow rhombus"<<"\n";
+    cin>>n;
+
+    for(i=1;i<=n;i++){
+
+        for ( j = 1; j <= n-i; j++)
+        {
+           cout<<" "; 
+        }
+        for(j=1;j<=n;j++){
+            if(i==1||i==n)
+            cout<<"*";
+
+            else{
+
+                if(j==1||j==n)
+                cout<<"*";
+
+                else
+                cout<<" ";
+
+
+            }
+            
+        }
+          cout<<"\n";
+    
+    
+    
+    
+    
+    
+    }
+
+
+return 0;
+}*/
+
+
+
+//Q18
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n,i,j;
+
+cout<<"upto which number you want to obtain pyramid pattern"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+    for(j=1;j<=n-i;j++){
+        cout<<" ";
+    }
+    for(j=1;j<=i;j++){
+        cout<<i<<" ";
+    }
+
+
+    cout<<'\n';
+}
+
+
+return 0;
+}*/
+
+
+
+
+//Q19
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+    int n,i,j;
+
+cout<<"upto which number you want to obtain pyramid pattern"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+    for(j=1;j<=n-i;j++){
+        cout<<" ";
+    }
+    for(j=1;j<=i;j++){
+        cout<<j<<" ";
+    }
+
+
+    cout<<'\n';
+}
+
+
+return 0;
+}*/
+
+
+//Q20
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int i,j,n;
+cout<<"enter n to get butterfly pattern of 2n rows"<<"\n";
+cin>>n;
+
+for ( i = 1; i <=n; i++)
+{
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    for(;j<=2*n-i;j++){
+        cout<<" ";
+
+    }
+
+    for(;j<=2*n;j++){
+        cout<<"*";
+    }
+
+    cout<<"\n";
+}
+
+for ( i = n; i >=1; i--)
+{
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    for(;j<=2*n-i;j++){
+        cout<<" ";
+
+    }
+
+    for(;j<=2*n;j++){
+        cout<<"*";
+    }
+
+    cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+
+
+//method-2
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int i,j,n;
+cout<<"enter n to get butterfly pattern of 2n rows"<<"\n";
+cin>>n;
+
+for ( i = 1; i <=n; i++)
+{
+    int empty_space=2*n-2*i;
+
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    for(j=1;j<=empty_space;j++){
+        cout<<" ";
+
+    }
+
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    cout<<"\n";
+}
+
+for ( i = n; i >=1; i--)
+{
+    int empty_space=2*n-2*i;
+
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    for(j=1;j<=empty_space;j++){
+        cout<<" ";
+
+    }
+
+    for(j=1;j<=i;j++){
+        cout<<"*";
+    }
+
+    cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+
+
+//Q21
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+
+int n,i,j;
+cout<<"enter n to print hollow butterfly pattern of 2n rows"<<"\n";
+cin>>n;
+
+for(i=1;i<=n;i++){
+   int empty_space=2*n-2*i;
+
+   for(j=1;j<=i;j++){
+       if(j==1||j==i)
+       cout<<"*";
+       
+       else
+       cout<<" ";
+   }
+
+   for(j=1;j<=empty_space;j++){
+       cout<<" ";
+
+   }
+
+   for(j=1;j<=i;j++){
+       if(j==1||j==i)
+       cout<<"*";
+       else
+       cout<<" ";
+   }
+
+   cout<<"\n";
+
+}
+
+for(i=n;i>=1;i--){
+   int empty_space=2*n-2*i;
+
+   for(j=1;j<=i;j++){
+       if(j==1||j==i)
+       cout<<"*";
+       
+       else
+       cout<<" ";
+   }
+
+   for(j=1;j<=empty_space;j++){
+       cout<<" ";
+
+   }
+
+   for(j=1;j<=i;j++){
+       if(j==1||j==i)
+       cout<<"*";
+       else
+       cout<<" ";
+   }
+
+   cout<<"\n";
+}
+
+
+return 0;
+}*/
+
+
+
+//Q22 pascal's triangle
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+int n,i,j;
+cout<<"enter n for getting pascal's triangle of n rows"<<"\n";
+cin>>n;
+int num=1;
+
+for(i=0;i<n;i++){
+
+  for(int space=1;space<=n-i;space++){
+
+      cout<<"  ";                         //double space
+  }
+  
+  for(j=0;j<=i;j++){
+
+      if(j==0||i==0)
+      num=1;
+
+      else
+      num=num*(i-j+1)/j;
+
+      cout<<num<< "   ";                //triple space
+  }
+
+
+
+   cout<<"\n";
+
+
+
+
+}
+
+
+
+return 0;
+}*/
+
+
+
+//Q23
+
+
+/*#include<iostream>
+using namespace std;
+
+int main(){
+
+int i,j,n;
+
+cout<<"enter width of 3 rowed zig zag pattern"<<"\n";
+cin>>n;
+
+for(i=1;i<=3;i++){
+
+    for(j=1;j<=n;j++){
+        if(((i+j)%4==0)||((i==2)&&(j%4==0)))
+        cout<<" *";                   //single space print before printing *
+
+        else
+        {
+            cout<<"  ";             //2 spaces
+        }
+    }
+    cout<<"\n";
+}
+
+return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
 
